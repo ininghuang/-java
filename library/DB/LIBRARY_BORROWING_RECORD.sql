@@ -1,0 +1,29 @@
+--------------------------------------------------------
+--  已建立檔案 - 星期五-1月-19-2024   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table LIBRARY_BORROWING_RECORD
+--------------------------------------------------------
+
+  CREATE TABLE "STUDENT"."LIBRARY_BORROWING_RECORD" 
+   (	"USER_ID" VARCHAR2(20 BYTE), 
+	"INVENTORY_ID" VARCHAR2(20 BYTE), 
+	"BORROWING_TIME" VARCHAR2(20 BYTE), 
+	"RETURN_TIME" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION DEFERRED 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  TABLESPACE "USERS" ;
+
+   COMMENT ON COLUMN "STUDENT"."LIBRARY_BORROWING_RECORD"."USER_ID" IS '使用者ID';
+   COMMENT ON COLUMN "STUDENT"."LIBRARY_BORROWING_RECORD"."INVENTORY_ID" IS '庫存ID';
+   COMMENT ON COLUMN "STUDENT"."LIBRARY_BORROWING_RECORD"."BORROWING_TIME" IS '借出日期時間';
+   COMMENT ON COLUMN "STUDENT"."LIBRARY_BORROWING_RECORD"."RETURN_TIME" IS '歸還日期時間';
+REM INSERTING into STUDENT.LIBRARY_BORROWING_RECORD
+SET DEFINE OFF;
+--------------------------------------------------------
+--  Constraints for Table LIBRARY_BORROWING_RECORD
+--------------------------------------------------------
+
+  ALTER TABLE "STUDENT"."LIBRARY_BORROWING_RECORD" MODIFY ("USER_ID" NOT NULL ENABLE);
+  ALTER TABLE "STUDENT"."LIBRARY_BORROWING_RECORD" MODIFY ("INVENTORY_ID" NOT NULL ENABLE);
